@@ -22,7 +22,7 @@ li {
 }
 
 .top-bar .title {
-    margin-left: 20px;;
+    margin-left: 20px;
 }
 
 .hotline {
@@ -47,17 +47,22 @@ li {
 }
 
 .top-logo-bar{
+    background-color: #FEFEFE;
     height: 80px;
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
 }
+.top-logo-bar a{
+    width: 300px;
+    height: 80px;
+    margin-left: 40px;
+}
 
 .top-logo-bar img {
-    width: 100px;
-    height: 100px;
-    margin-left: 20px;
+    width: 100%;
+    height: 100%;
 }
 
 .top-logo-bar .search-input{
@@ -86,31 +91,41 @@ li {
 }
 
 .menu-bar li {
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+}
+
+.menu-bar li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 100%;
 }
 
 
-.menu-bar button {
+.menu-bar span {
+    display: inline;
     color: white;
     font-weight: bold;
     background-color: #0582B1;
-    height: 100%;
-    border: none;
-    width: 100%;
 }
 
-.menu-bar button:hover {
+.menu-bar a:hover {
     background-color: #2973b9;
 }
 
-.menu-bar li.selected {
+.menu-bar a.selected {
     width: 200px;
 }
 
-.menu-bar li.selected button {
+.menu-bar a.selected, .menu-bar a.selected span {
     background-color: #65B83C;
 }
+
 
 .menu-bar .login-bar{
     position: absolute;
@@ -133,12 +148,18 @@ li {
     margin: 0 10px;
 }
 
+main {
+    width: 100%;
+}
+
+.ad-container{
+    width: 100%;
+}
+
 .ad{
-    width: 95vw;
     height: 400px;
     background-color: white;
-    margin: 30px;
-    border-radius: 5px;
+    border: 20px solid #EBEBEB;
 }
 
 .ad .ad-top h3 {
@@ -182,9 +203,9 @@ li {
 
 .ad .ad-bottom {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     height: 300px;
+    overflow: hidden;
 }
 
 .ad .ad-bottom .product{
@@ -194,12 +215,17 @@ li {
     align-items: center;
     border: 1px solid #464646;
     border-radius: 5px;
-    margin-left: 20px;
+    margin: 0 20px;
+}
+
+.ad .ad-bottom .product .product-image {
+    width: 80%;
+        height: 150px;
 }
 
 .ad .ad-bottom .product img{
-    width: 80%;
-    height: 150px;
+    width: 100%;
+    height: 100%;
 }
 
 .ad .ad-bottom .product h5 {
@@ -223,6 +249,15 @@ li {
 
 .price p{
     margin: 5px 20px;
+}
+
+.price .sale{
+    font-size: 16px;
+    color: red;
+}
+
+.price .unsale {
+    font-size: 14px;
 }
 
 
