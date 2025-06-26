@@ -240,6 +240,8 @@ main {
 
 
 .ad .ad-bottom .product button {
+    margin-top: 5px;
+    cursor: pointer;
     background-color: #0582B1;
     border: none;
     width: 100px;
